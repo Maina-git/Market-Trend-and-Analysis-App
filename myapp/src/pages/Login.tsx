@@ -9,7 +9,7 @@ const Login: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="bg-gray-900 p-8 rounded-xl shadow-lg w-full max-w-md prose prose-invert">
         <h2 className="text-3xl font-bold text-green-500 mb-6 text-center">
-          Welcome to <span className="text-white">FX Pro</span>
+          Welcome to <span className="text-white">FX Vision</span>
         </h2>
         <p className="text-gray-400 text-center mb-6">
           Sign in to access your forex dashboard.

@@ -11,7 +11,7 @@ const Signup = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className="bg-gray-900 p-8 rounded-xl shadow-lg w-full max-w-md prose prose-invert">
-        <h2 className="text-3xl font-bold mb-4 text-green-500 text-center">Create Your FX Pro Account</h2>
+        <h2 className="text-3xl font-bold mb-4 text-green-500 text-center">Create Your FX Vision</h2>
         <p className="text-gray-400 text-sm mb-6 text-center">
           Get started with real-time forex trends and insights.
         </p>
