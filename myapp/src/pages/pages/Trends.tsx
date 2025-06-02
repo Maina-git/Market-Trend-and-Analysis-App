@@ -40,25 +40,24 @@ const Trends = () => {
   const trendData = dataSets[timeframe];
 
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md">
+    <div className="p-6 bg-blue-950 rounded-lg shadow-md">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-indigo-700">📈 Forex Trends</h2>
+        <h2 className="text-2xl font-bold text-gray-300">Forex Trends</h2>
         <div className="space-x-2">
           {(['daily', 'monthly', 'yearly'] as const).map((option) => (
             <button
               key={option}
               onClick={() => setTimeframe(option)}
               className={`px-3 py-1 text-sm font-medium rounded-full transition-all duration-300 ${
-                timeframe === option ? 'bg-indigo-600 text-white' : 'bg-indigo-100 text-indigo-700'
-              }`}
-            >
+                timeframe === option ? 'bg-indigo-800 text-white' : 'bg-indigo-100 text-indigo-800'
+              }`}>
               {option.charAt(0).toUpperCase() + option.slice(1)}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded-xl shadow-inner mb-6">
+      <div className="bg-gray-950 p-6 rounded-xl shadow-inner mb-6">
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={trendData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -70,11 +69,11 @@ const Trends = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="bg-white p-6 rounded-xl shadow-inner">
-        <h3 className="text-lg font-semibold text-indigo-700 mb-4">📊 Price Overview (Bar Chart)</h3>
+      <div className="bg-gray-950 p-6 rounded-xl shadow-inner">
+        <h3 className="text-lg font-semibold text-gray-300 mb-4">Price Overview (Bar Chart)</h3>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={trendData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <CartesianGrid strokeDasharray="3 3" stroke='none'/>
             <XAxis dataKey="label" tick={{ fill: '#4B5563', fontSize: 12 }} />
             <YAxis domain={['auto', 'auto']} tick={{ fill: '#4B5563', fontSize: 12 }} />
             <Tooltip contentStyle={{ backgroundColor: '#f9fafb', borderColor: '#d1d5db' }} />
